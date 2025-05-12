@@ -65,11 +65,9 @@ function carregarDados() {
         document.getElementById("cidade").value = dados.cidade;
         document.getElementById("estado").value = dados.estado;
         document.getElementById("numero").value = dados.numero;
+        document.getElementById("complemento").value = dados.complemento;
     }
 }
-
-// Ao carregar a página, os dados são recuperados
-window.onload = carregarDados;
 
 // Referência ao botão
 const botaoTema = document.getElementById("botaoTema");
@@ -90,6 +88,7 @@ function alternarTema() {
 
 // Verifica se existe um tema salvo no localStorage
 window.onload = () => {
+    carregarDados();
     const temaSalvo = localStorage.getItem("tema");
     if (temaSalvo === "dark") {
         document.body.classList.add("dark");
@@ -99,3 +98,7 @@ window.onload = () => {
 
 // Adiciona o evento de clique para alternar o tema
 botaoTema.addEventListener("click", alternarTema);
+
+document.getElementById("salvarDados").addEventListener("click", () => {
+    salvarDados();
+})
