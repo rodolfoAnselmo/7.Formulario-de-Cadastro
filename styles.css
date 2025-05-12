@@ -1,0 +1,68 @@
+
+/* Estilo geral do documento */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Botão para troca de tema */
+#botaoTema {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border: none;
+    background-color: transparent;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+/* Estilo do container principal */
+main {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Estilo dos labels e inputs */
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+}
+
+form input[readonly] {
+    background-color: #f1f1f1;
+    cursor: not-allowed;
+}
+
+/* Tema escuro */
+body.dark {
+    background-color: #333;
+    color: #f1f1f1;
+}
+
+body.dark form input {
+    background-color: #555;
+    border: 1px solid #888;
+    color: #f1f1f1;
+}
+
+body.dark form input[readonly] {
+    background-color: #666;
+}
